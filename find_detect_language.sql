@@ -1,3 +1,4 @@
+-- Finds titles which contain the word "the"
 SELECT *
 FROM itemData
 		INNER JOIN fields ON fields.fieldID = itemData.fieldID

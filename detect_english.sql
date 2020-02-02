@@ -1,3 +1,6 @@
+-- Sets the language for items to english when the title contains
+-- the word "the". Requires a row with value "EN" to exist in 
+-- the itemDataValues table.
 REPLACE INTO itemData (itemID, fieldID, valueID)
     SELECT itemData.itemID, 
         (SELECT fields.fieldID FROM fields WHERE fields.fieldName = "language"), 
